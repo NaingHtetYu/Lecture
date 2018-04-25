@@ -3,12 +3,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def defult():
-	return ("Hello")
-	
-@app.route('/hello/<name>')
-def hello(name=None):
-	user = {'name': name}
-	return render_template('hello.html' , user=user)
+	return render_template('bootstrap.html'), 200
 	
 if __name__ == "__main__":
 		app.run(host='0.0.0.0', debug=True)
